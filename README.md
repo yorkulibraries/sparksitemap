@@ -1,22 +1,34 @@
 # sparksitemap
 
-Makes an XML sitemap for the SPARK web site (http://www.yorku.ca/spark/).
+Make an [XML sitemap][http://www.sitemaps.org/protocol.html] for the SPARK web site (http://www.yorku.ca/spark/).
 
-## Usage
+# Configuration
 
-Move to the root directory of the SPARK content (where the home `index.html` file is, and directories such as `academic_integrity/`).
+A few variables can be customized at the top of the script, but they shouldn't need changing.
 
-Run
+# Usage
 
-    $ sparksitemap > sitemap.xml
+Move to the root directory of the SPARK content (where the home `index.html` file is, and directories such as `academic_integrity/`).  Then run
 
-To make sure it's valid XML, you can check by running
+    $ /path/to/sparksitemap > sitemap.xml
 
-	$ xmllint sitemap.xml
+Confirm that the result is valid by running
 
-Update the sitemap whenever any SPARK files are updated.
+	$ xmllint --noout --schema http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd sitemap.xml
 
-## License
+It should say
+
+	sitemap.xml validates
+
+## When to run the script
+
+Run the script to update the sitemap whenever any SPARK files are updated.  Or run it from a cron job, with something like this, which would run it at 4 am on Tuesdays each week:
+
+    0 4 * * 2 cd /var/www/spark/; /path/to/sparksitemap > sitemap.xml
+
+Or run it by hand whenever the SPARK content is updated.
+
+# License
 
 The MIT License (MIT)
 

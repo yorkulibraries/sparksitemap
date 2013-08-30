@@ -33,7 +33,10 @@ priority = "0.5" # Default; protocol sets it to 0.5 if undefined
 require 'nokogiri'
 require 'find'
 
-sitemap = Nokogiri::XML '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>'
+sitemap = Nokogiri::XML '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" />' 
+
 sitemap.encoding = "UTF-8"
 
 Find.find('.').each do |f| 
