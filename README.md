@@ -1,6 +1,6 @@
 # sparksitemap
 
-Make an [XML sitemap][http://www.sitemaps.org/protocol.html] for the SPARK web site (http://www.yorku.ca/spark/).
+Make an [XML sitemap](http://www.sitemaps.org/protocol.html) for the SPARK web site (http://www.yorku.ca/spark/).
 
 # Configuration
 
