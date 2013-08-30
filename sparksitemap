@@ -1,10 +1,5 @@
 #!/usr/bin/env ruby
 
-# sparksitemap
-#
-# Usage:
-
-
 # The MIT License (MIT)
 #
 # Copyright (c) 2013 William Denton
@@ -27,16 +22,16 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-require 'nokogiri'
-require 'find'
-
 # Settings
 
 sparkurl = "http://www.yorku.ca/spark/" # Must end in /
-changefreq = "monthly"
-priority = "0.5"
+changefreq = "monthly" # Good enough, site isn't updated much
+priority = "0.5" # Default; protocol sets it to 0.5 if undefined
 
 # XML sitemap docs are at http://www.sitemaps.org/protocol.html
+
+require 'nokogiri'
+require 'find'
 
 sitemap = Nokogiri::XML '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>'
 sitemap.encoding = "UTF-8"

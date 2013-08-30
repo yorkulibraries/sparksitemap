@@ -4,6 +4,17 @@ Makes an XML sitemap for the SPARK web site (http://www.yorku.ca/spark/).
 
 ## Usage
 
+Move to the root directory of the SPARK content (where the home `index.html` file is, and directories such as `academic_integrity/`).
+
+Run
+
+    $ sparksitemap > sitemap.xml
+
+To make sure it's valid XML, you can check by running
+
+	$ xmllint sitemap.xml
+
+Update the sitemap whenever any SPARK files are updated.
 
 ## License
 
