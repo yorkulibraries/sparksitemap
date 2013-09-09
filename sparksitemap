@@ -24,7 +24,7 @@
 
 # Settings
 
-sparkurl = "http://www.library.yorku.ca/sparkdev/" # Must end in /
+sparkurl = "http://www-dev.library.yorku.ca/spark/" # Must end in /
 changefreq = "monthly" # Good enough, site isn't updated much
 priority = "0.5" # Default; protocol sets it to 0.5 if undefined
 
