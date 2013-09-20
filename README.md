@@ -1,12 +1,20 @@
 # sparksitemap
 
-Make an [XML sitemap](http://www.sitemaps.org/protocol.html) for the SPARK web site (http://www.yorku.ca/spark/).
+Make a human-readable sitemap or an [XML sitemap](http://www.sitemaps.org/protocol.html) for the SPARK web site (http://www.yorku.ca/spark/).
 
 # Configuration
 
-A few variables can be customized at the top of the script, but they shouldn't need changing.
+A few variables can be customized at the top of the scripts, but they shouldn't need changing.
 
-# Usage
+# Usage: humanmap
+
+Move to the root directory of the SPARK content (where the home `index.html` file is, and directories such as `academic_integrity/`).  Then run
+
+    $ /path/to/humanmap > sitemap-fragment.html
+
+`sitemap-fragment.html` will require editing by hand to fix up minor problems, and then it will be ready to include in the real sitemap file.
+
+# Usage: sparksitemap
 
 Move to the root directory of the SPARK content (where the home `index.html` file is, and directories such as `academic_integrity/`).  Then run
 
